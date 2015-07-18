@@ -1,7 +1,6 @@
 # GComp: Golang for Competition Programming
 
-I created this library for using in competitions.
-
+I created this repo as a resource for myself for using in competitions.
 
 ### Algorithm Resources
 

@@ -1,0 +1,68 @@
+########################
+# Competition Snippets #
+########################
+snippet iferr
+if err != nil {
+	${1:fmt.Errorf("%v", err)}
+}
+
+endsnippet
+# Formatting / Logging methods
+snippet fmte
+fmt.Errorf("Err: %v", err)
+endsnippet
+
+snippet pt
+fmt.Printf("%v\n", ${1:"Log something"})
+endsnippet
+
+snippet fmts
+k := fmt.Sprintf("%v\n", ${1:"Log something"})
+endsnippet
+
+
+snippet scan
+for {
+	var st string
+	fmt.Scanln("%s", &st)
+	fmt.Printf("%s\n", st)
+}
+endsnippet
+
+snippet ssplit
+splat := strings.Split(${1:val}, "${2:sep}")
+endsnippet
+
+snippet stof
+var ft float64
+if ift, err := strconv.ParseFloat(${1:val}, 64); err != nil {
+	panic(fmt.Sprintf("Error parsing float: %v", err))
+} else {
+	ft = ift
+}
+endsnippet
+
+snippet stoi
+var iv int64
+if iiv, err := strconv.ParseInt(${1:val}, 10, 64); err != nil {
+	panic(fmt.Sprintf("Error parsing float: %v", err))
+} else {
+	iv = iiv 
+}
+endsnippet
+
+snippet main
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+	fmt.Printf("%v\n", "Log something")
+}
+endsnippet
+
+snippet pack
+package `!v expand('%:p:h:t')`
+endsnippet
